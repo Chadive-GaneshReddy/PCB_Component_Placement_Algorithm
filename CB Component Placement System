@@ -1,0 +1,34 @@
+# PCB Component Placement System
+
+## Description
+This project implements a **constraint-based placement algorithm** for components on a 50×50 PCB board. It solves the PCB Component Placement Assignment by placing all components according to hard constraints while optimizing soft constraints for compactness and efficiency.
+
+### Features:
+- **Hard Constraints**:
+  - Edge placement for USB and MikroBus connectors
+  - Parallel placement for MikroBus connectors on opposite edges
+  - Proximity constraint: Crystal within 10 units of Microcontroller
+  - Keep-out zone validation for USB interference
+  - Global balance: center of mass within 2-unit radius of board center
+  - No overlapping and boundary enforcement
+- **Soft Constraints**:
+  - Minimize wasted space
+  - Compact placement
+  - Prefer central positions for unconstrained components
+
+- **Visualization**:
+  - Matplotlib plots showing component positions, labels, proximity circles, and keep-out zones
+  - Demo placement and solver outputs
+
+## Repository Files
+- `pcb_component_placement.py` – Python implementation with **basic solver** and **optimizer**, includes validation, scoring, and plotting.
+- `PCB Component Placement Assignment Report.pdf` – Documentation explaining the algorithm, approach, and sample outputs.
+- `PCB_Component_Placement_Assignment.pdf` – Original assignment/problem statement.
+
+## Sample Output
+- Component placement visualization showing USB, Microcontroller, Crystal, MikroBus connectors.
+- Proximity circle for Crystal.
+- Keep-out zone from USB connector.
+
+## License
+You can optionally specify a license if you want to allow reuse of your code (MIT, Apache, etc.).
